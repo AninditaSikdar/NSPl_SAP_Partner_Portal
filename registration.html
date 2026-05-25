@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration - SAP Partner Portal</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="NSPL logo" class="logo-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="justify-content: end;">
+            <div class="navbar-nav">
+                <a class="signin" href="signin.html">Sign In</a>
+                <a class="signup" href="registration.html">Registration</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!--registration-page-->
+<div class="registration-page">
+    <div class="container">
+        <div class="step-progress-wrapper mb-5">
+            <div class="step-progress">
+                <div class="step active">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Partner Manager</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Company Details</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Other Details</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Review & Submit</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="registration-card">
+            <form class="partner-form" action="#" method="POST">
+                
+                <!-- Step 1: Partner Manager -->
+                <div id="step-1" class="step-section">
+                    <div class="section-heading">
+                        <h2>Partner Manager Information</h2>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-4 input-form">
+                            <label for="salutation" class="form-label"><b style="color: red;">*</b> Salutation</label>
+                            <select class="form-control form-select login-input" id="salutation" name="salutation">
+                                <option>Mr.</option>
+                                <option>Ms.</option>
+                                <option>Mrs.</option>
+                                <option>Dr.</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="firstName" class="form-label"><b style="color: red;">*</b> First Name</label>
+                            <input type="text" class="form-control login-input" id="firstName" name="firstName" value="" placeholder="" required>
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="middleName" class="form-label">Middle Name</label>
+                            <input type="text" class="form-control login-input" id="middleName" name="middleName" placeholder="">
+                        </div>
+
+                        <div class="col-md-4 input-form">
+                            <label for="lastName" class="form-label"><b style="color: red;">*</b> Last Name</label>
+                            <input type="text" class="form-control login-input" id="lastName" name="lastName" value="" placeholder="" required>
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="jobTitle" class="form-label"><b style="color: red;">*</b> Job Title</label>
+                            <input type="text" class="form-control login-input" id="jobTitle" name="jobTitle" value="" placeholder="" required>
+                        </div>
+
+                        <div class="col-md-4 input-form">
+                            <label for="businessPhone" class="form-label"><b style="color: red;">*</b> Business Phone (without country code)</label>
+                            <input type="tel" class="form-control login-input" id="businessPhone" name="businessPhone" value="" placeholder="" required>
+                            <!-- <small class="field-note">Use digits only, without country code.</small> -->
+                        </div>
+
+                        <div class="col-md-4 input-form">
+                            <label for="mobilePhone" class="form-label">Mobile Phone (without country code)</label>
+                            <input type="tel" class="form-control login-input" id="mobilePhone" name="mobilePhone" value="" placeholder="" required>
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="emailAddress" class="form-label"><b style="color: red;">*</b> E-Mail Address</label>
+                            <input type="email" class="form-control login-input" id="emailAddress" name="emailAddress" value="" placeholder="" required>
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label class="form-label d-block"><b style="color: red;">*</b> Same as Company Address</label>
+                            <div class="radio-group">
+                                <label class="radio-pill">
+                                    <input type="radio" name="sameAsCompanyAddress" value="yes" checked>
+                                    <span>Yes</span>
+                                </label>
+                                <label class="radio-pill">
+                                    <input type="radio" name="sameAsCompanyAddress" value="no">
+                                    <span>No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions" style="justify-content: end;">
+                        <button type="button" class="signin" onclick="nextStep(2)">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Company Details -->
+                <div id="step-2" class="step-section d-none">
+                    <div class="section-heading">
+                        <h2>Company Information</h2>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-4 input-form">
+                            <label for="companyName1" class="form-label"><b style="color: red;">*</b>  Company Name 1</label>
+                            <input type="text" class="form-control login-input" id="companyName1" name="companyName1" value="" placeholder="" required>
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="companyStreet" class="form-label"><b style="color: red;">*</b> Company Street or PO Box</label>
+                            <input type="text" class="form-control login-input" id="companyStreet" name="companyStreet" value="" placeholder="">
+                        </div>
+
+                        <div class="col-md-4 input-form">
+                            <label for="companyCity" class="form-label"><b style="color: red;">*</b> City</label>
+                            <input type="text" class="form-control login-input" id="companyCity" name="companyCity" value="" placeholder="">
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="companyPostalCode" class="form-label"><b style="color: red;">*</b> ZIP/Postal Code</label>
+                            <input type="text" class="form-control login-input" id="companyPostalCode" name="companyPostalCode" value="" placeholder="">
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="stateProvince" class="form-label"><b style="color: red;">*</b> State</label>
+                            <input type="text" class="form-control login-input" id="stateProvince" name="stateProvince" value="" placeholder="">
+                        </div>
+
+                        <div class="col-md-4 input-form">
+                            <label for="companyCountry" class="form-label"><b style="color: red;">*</b> Country</label>
+                            <input type="text" class="form-control login-input" id="companyCountry" name="companyCountry" value="" placeholder="">
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="companyPhone" class="form-label">Company Phone No. (without country code)</label>
+                            <input type="tel" class="form-control login-input" id="companyPhone" name="companyPhone" value="" placeholder="">
+                            <!-- <small class="field-note">Use digits only, without country code.</small> -->
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="companyEmail" class="form-label">Company E-Mail</label>
+                            <input type="email" class="form-control login-input" id="companyEmail" name="companyEmail" value="" placeholder="">
+                        </div>
+
+                        <div class="col-md-4 input-form">
+                            <label for="companyWebAddress" class="form-label">URL</label>
+                            <input type="text" class="form-control login-input" id="companyWebAddress" name="companyWebAddress" value="" placeholder="">
+                        </div>
+
+                        <div class="col-md-4 input-form">
+                            <label for="vatRegistration" class="form-label">GST No.</label>
+                            <input type="text" class="form-control login-input" id="vatRegistration" name="vatRegistration" placeholder="">
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="signup" onclick="prevStep(1)">Previous</button>
+                        <button type="button" class="signin" onclick="nextStep(3)">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Other Details -->
+                <div id="step-3" class="step-section d-none">
+                    <div class="section-heading">
+                        <h2>Other Details</h2>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-12 input-form">
+                            <label class="form-label"><b style="color: red;">*</b> Which business applications does your company specialize in? (Select all that apply)</label>
+                            <div class="checkbox-grid">
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Electronic Commerce"><span>Electronic Commerce</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Customer Relationship Management"><span>Customer Relationship Management</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Supply Chain Management"><span>Supply Chain Management</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Strategic Enterprise Management"><span>Strategic Enterprise Management</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Business Intelligence"><span>Business Intelligence</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Knowledge Management/Search HR/Human Capital Management"><span>Knowledge Management/Search HR/Human Capital Management</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Product Lifecycle Management"><span>Product Lifecycle Management</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Financials and Cost Management" checked><span>Financials and Cost Management</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Collaboration"><span>Collaboration</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Enterprise Application Integration"><span>Enterprise Application Integration (EAI)</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Mobile Wireless"><span>Mobile/Wireless</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Syndicated Content"><span>Syndicated Content</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="eLearning" checked><span>eLearning</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Infrastructure"><span>Infrastructure</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Load Balancing"><span>Load Balancing</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Workflow"><span>Workflow</span></label>
+                                <label class="check-card"><input type="checkbox" name="businessApplications" value="Other"><span>Other</span></label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 input-form">
+                            <label class="form-label d-block"><b style="color: red;">*</b> Do you have employees with SAP Technical Skills?</label>
+                            <div class="radio-group">
+                                <label class="radio-pill"><input type="radio" name="sapTechnicalSkills" value="yes" checked><span>Yes</span></label>
+                                <label class="radio-pill"><input type="radio" name="sapTechnicalSkills" value="no"><span>No</span></label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 input-form">
+                            <label class="form-label d-block"><b style="color: red;">*</b> Do you have employees with SAP Application Skills?</label>
+                            <div class="radio-group">
+                                <label class="radio-pill"><input type="radio" name="sapApplicationSkills" value="yes" checked><span>Yes</span></label>
+                                <label class="radio-pill"><input type="radio" name="sapApplicationSkills" value="no"><span>No</span></label>
+                            </div>
+                        </div>
+
+
+                        
+                        <div class="col-md-12 input-form">
+                            <label for="helpDeskCapabilities" class="form-label">Please describe if you have Help Desk Capabilities" (Telemarketing Call Center, Support Center)</label>
+                            <textarea class="form-control login-input" id="helpDeskCapabilities" name="helpDeskCapabilities" rows="3" placeholder=""></textarea>
+                        </div>
+
+                        <div class="col-12 input-form">
+                            <label class="form-label d-block">Do you currently run marketing or lead generation programs?</label>
+                            <div class="option-stack">
+                                <label class="option-line"><input type="radio" name="marketingPrograms" value="dedicated"><span>Yes, I have dedicated resources and budget for marketing</span></label>
+                                <label class="option-line"><input type="radio" name="marketingPrograms" value="limited"><span>Limited: I have very limited resources and budget for marketing</span></label>
+                                <label class="option-line"><input type="radio" name="marketingPrograms" value="none" checked><span>No: I do not run any marketing programs</span></label>
+                            </div>
+                        </div>
+
+ 
+                        <div class="col-6">
+                            <label class="form-label d-block"><b style="color: red;">*</b> Do you currently sell ERP (Enterprise Resource Planning), CRM (Customer Relationship Management) or BI (Business Intelligence) applications?</label>
+                            <div class="radio-group">
+                                <label class="radio-pill"><input type="radio" name="sellEnterpriseSolutions" value="yes" checked><span>Yes</span></label>
+                                <label class="radio-pill"><input type="radio" name="sellEnterpriseSolutions" value="no"><span>No</span></label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="resellingBusinessPercent" class="form-label"><b style="color: red;">*</b> What percentage of your overall business is from reselling business applications?</label>
+                            <input type="text" class="form-control login-input" id="resellingBusinessPercent" name="resellingBusinessPercent" value="" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="signup" onclick="prevStep(2)">Previous</button>
+                        <button type="button" class="signin" onclick="nextStep(4)">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Review & Submit -->
+                <div id="step-4" class="step-section d-none">
+                    <div class="row g-4">
+                        <div class="col-12 text-center my-4">
+                            <h4 style="color: #0d4a91; font-weight: 700;">Ready to Submit?</h4>
+                            <p style="color: #617286;">By clicking submit, you confirm that all information provided is accurate and you agree to the SAP Partner Portal terms and conditions.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-actions mt-0">
+                        <button type="button" class="signup" onclick="prevStep(3)">Previous</button>
+                        <button type="submit" class="signin px-5">Submit Application</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer">
+    <p>&copy; 2026 Nishan Systems Pvt. Ltd. All rights reserved.</p>
+</div>
+
+<script src="js/bootstrap.min.js"></script>
+<script>
+    function showStep(step) {
+        // Hide all steps
+        document.querySelectorAll('.step-section').forEach(function(el) {
+            el.classList.add('d-none');
+        });
+        // Show target step
+        document.getElementById('step-' + step).classList.remove('d-none');
+
+        // Update progress bar
+        const steps = document.querySelectorAll('.step-progress .step');
+        steps.forEach(function(el, index) {
+            if (index + 1 < step) {
+                el.classList.add('completed');
+                el.classList.remove('active');
+            } else if (index + 1 === step) {
+                el.classList.add('active');
+                el.classList.remove('completed');
+            } else {
+                el.classList.remove('active', 'completed');
+            }
+        });
+    }
+
+    function nextStep(step) { showStep(step); }
+    function prevStep(step) { showStep(step); }
+</script>
+
+</body>
+</html>

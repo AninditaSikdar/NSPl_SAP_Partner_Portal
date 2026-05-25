@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Verification - SAP Partner Portal</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!--login-sec-->
+<div class="login-sec">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="login-card">
+                    <div class="text-center mb-1">
+                        <h2 style="color: #0d4a91; margin-bottom: 8px;">OTP Verification</h2>
+                        <p style="color: #6c757d; font-size: 15px;">Enter the 6-digit code sent to your registered phone.</p>
+                    </div>
+                    <form action="#" method="POST">
+                        <div class="mb-4">
+                            <label for="otpCode" class="form-label d-block text-center">One-Time Password</label>
+                            <input type="text" class="form-control login-input text-center" id="otpCode" placeholder="X X X X X X" maxlength="6" style="font-size: 24px; letter-spacing: 8px; font-weight: 600;" required>
+                        </div>
+                        <button type="submit" class="signin w-100 justify-content-center">Submit</button>
+
+                        <div class="text-center mt-4">
+                            <p id="resendMessage" style="color: #198754; font-weight: 600; font-size: 14px; display: none; margin-bottom: 5px;">A new code has been sent!</p>
+                            <p style="color: #617286; font-size: 14px;">Didn't receive the code? <a href="#" onclick="resendOTP(event)" style="color: #0d4a91; font-weight: 600; text-decoration: none;">Resend</a></p>
+                        </div>
+
+                        <a href="signin.html" class="back-btn mt-3">
+                            <i class="fa fa-angle-double-left"></i> Back to Login
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/bootstrap.min.js"></script>
+<script>
+    function resendOTP(event) {
+        event.preventDefault(); // Prevents the page from jumping to top
+        var msg = document.getElementById('resendMessage');
+        msg.style.display = 'block';
+        
+        // Hide the message again after 3 seconds
+        setTimeout(function() {
+            msg.style.display = 'none';
+        }, 3000);
+    }
+</script>
+
+</body>
+</html>
