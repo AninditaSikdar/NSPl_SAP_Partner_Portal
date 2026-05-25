@@ -35,11 +35,11 @@
             <div class="step-progress">
                 <div class="step active">
                     <div class="step-circle">1</div>
-                    <div class="step-label">Partner Manager</div>
+                    <div class="step-label">Company Details</div>
                 </div>
                 <div class="step">
                     <div class="step-circle">2</div>
-                    <div class="step-label">Company Details</div>
+                    <div class="step-label">Partner Manager</div>
                 </div>
                 <div class="step">
                     <div class="step-circle">3</div>
@@ -54,9 +54,69 @@
 
         <div class="registration-card">
             <form class="partner-form" action="#" method="POST">
-                
-                <!-- Step 1: Partner Manager -->
+
+                <!-- Step 1: Company Details -->
                 <div id="step-1" class="step-section">
+                    <div class="section-heading">
+                        <h2>Company Information</h2>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-4 input-form">
+                            <label for="companyName1" class="form-label"><b style="color: red;">*</b>  Company Name 1</label>
+                            <input type="text" class="form-control login-input" id="companyName1" name="companyName1" value="" placeholder="" required>
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="companyStreet" class="form-label"><b style="color: red;">*</b> Company Street or PO Box</label>
+                            <input type="text" class="form-control login-input" id="companyStreet" name="companyStreet" value="" placeholder="">
+                        </div>
+
+                        <div class="col-md-4 input-form">
+                            <label for="companyCity" class="form-label"><b style="color: red;">*</b> City</label>
+                            <input type="text" class="form-control login-input" id="companyCity" name="companyCity" value="" placeholder="">
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="companyPostalCode" class="form-label"><b style="color: red;">*</b> ZIP/Postal Code</label>
+                            <input type="text" class="form-control login-input" id="companyPostalCode" name="companyPostalCode" value="" placeholder="">
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="stateProvince" class="form-label"><b style="color: red;">*</b> State</label>
+                            <input type="text" class="form-control login-input" id="stateProvince" name="stateProvince" value="" placeholder="">
+                        </div>
+
+                        <div class="col-md-4 input-form">
+                            <label for="companyCountry" class="form-label"><b style="color: red;">*</b> Country</label>
+                            <input type="text" class="form-control login-input" id="companyCountry" name="companyCountry" value="" placeholder="">
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="companyPhone" class="form-label">Company Phone No. (without country code)</label>
+                            <input type="tel" class="form-control login-input" id="companyPhone" name="companyPhone" value="" placeholder="">
+                            <!-- <small class="field-note">Use digits only, without country code.</small> -->
+                        </div>
+                        <div class="col-md-4 input-form">
+                            <label for="companyEmail" class="form-label">Company E-Mail</label>
+                            <input type="email" class="form-control login-input" id="companyEmail" name="companyEmail" value="" placeholder="">
+                        </div>
+
+                        <div class="col-md-4 input-form">
+                            <label for="companyWebAddress" class="form-label">URL</label>
+                            <input type="text" class="form-control login-input" id="companyWebAddress" name="companyWebAddress" value="" placeholder="">
+                        </div>
+
+                        <div class="col-md-4 input-form">
+                            <label for="vatRegistration" class="form-label">GST No.</label>
+                            <input type="text" class="form-control login-input" id="vatRegistration" name="vatRegistration" placeholder="">
+                        </div>
+                        
+                    </div>
+
+                    
+                    <div class="form-actions" style="justify-content: end;">
+                        <button type="button" class="signin" onclick="nextStep(2)">Next</button>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Partner Manager -->
+                <div id="step-2" class="step-section d-none">
                     <div class="section-heading">
                         <h2>Partner Manager Information</h2>
                     </div>
@@ -116,65 +176,6 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="form-actions" style="justify-content: end;">
-                        <button type="button" class="signin" onclick="nextStep(2)">Next</button>
-                    </div>
-                </div>
-
-                <!-- Step 2: Company Details -->
-                <div id="step-2" class="step-section d-none">
-                    <div class="section-heading">
-                        <h2>Company Information</h2>
-                    </div>
-                    <div class="row g-4">
-                        <div class="col-md-4 input-form">
-                            <label for="companyName1" class="form-label"><b style="color: red;">*</b>  Company Name 1</label>
-                            <input type="text" class="form-control login-input" id="companyName1" name="companyName1" value="" placeholder="" required>
-                        </div>
-                        <div class="col-md-4 input-form">
-                            <label for="companyStreet" class="form-label"><b style="color: red;">*</b> Company Street or PO Box</label>
-                            <input type="text" class="form-control login-input" id="companyStreet" name="companyStreet" value="" placeholder="">
-                        </div>
-
-                        <div class="col-md-4 input-form">
-                            <label for="companyCity" class="form-label"><b style="color: red;">*</b> City</label>
-                            <input type="text" class="form-control login-input" id="companyCity" name="companyCity" value="" placeholder="">
-                        </div>
-                        <div class="col-md-4 input-form">
-                            <label for="companyPostalCode" class="form-label"><b style="color: red;">*</b> ZIP/Postal Code</label>
-                            <input type="text" class="form-control login-input" id="companyPostalCode" name="companyPostalCode" value="" placeholder="">
-                        </div>
-                        <div class="col-md-4 input-form">
-                            <label for="stateProvince" class="form-label"><b style="color: red;">*</b> State</label>
-                            <input type="text" class="form-control login-input" id="stateProvince" name="stateProvince" value="" placeholder="">
-                        </div>
-
-                        <div class="col-md-4 input-form">
-                            <label for="companyCountry" class="form-label"><b style="color: red;">*</b> Country</label>
-                            <input type="text" class="form-control login-input" id="companyCountry" name="companyCountry" value="" placeholder="">
-                        </div>
-                        <div class="col-md-4 input-form">
-                            <label for="companyPhone" class="form-label">Company Phone No. (without country code)</label>
-                            <input type="tel" class="form-control login-input" id="companyPhone" name="companyPhone" value="" placeholder="">
-                            <!-- <small class="field-note">Use digits only, without country code.</small> -->
-                        </div>
-                        <div class="col-md-4 input-form">
-                            <label for="companyEmail" class="form-label">Company E-Mail</label>
-                            <input type="email" class="form-control login-input" id="companyEmail" name="companyEmail" value="" placeholder="">
-                        </div>
-
-                        <div class="col-md-4 input-form">
-                            <label for="companyWebAddress" class="form-label">URL</label>
-                            <input type="text" class="form-control login-input" id="companyWebAddress" name="companyWebAddress" value="" placeholder="">
-                        </div>
-
-                        <div class="col-md-4 input-form">
-                            <label for="vatRegistration" class="form-label">GST No.</label>
-                            <input type="text" class="form-control login-input" id="vatRegistration" name="vatRegistration" placeholder="">
-                        </div>
-                        
                     </div>
 
                     <div class="form-actions">
