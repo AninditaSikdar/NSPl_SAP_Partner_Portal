@@ -51,6 +51,17 @@ p {
     margin: 0;
 }
 
+.Verify{
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0d4a91;
+    text-decoration: underline;
+    padding: 7px 0 0;
+    border: none;
+    text-align: end;
+    width: 100%;
+}
 .registration {
     background-color: transparent;
     border: 1px solid #fff;
