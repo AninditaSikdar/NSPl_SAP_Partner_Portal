@@ -16214,6 +16214,7 @@ pre[class*=language-] > code {
   display: flex;
   align-items: center;
   position: relative;
+  font-size: 16px;
 }
 /* .pc-header .pc-head-link {
   margin: 0 4px;

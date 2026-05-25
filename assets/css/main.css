@@ -173,5 +173,25 @@ border-radius:10px;
     }
 }
 
+/* .page-header.full-width {
+    margin: -20px -30px 20px !important;
+} */
 
+@media (max-width: 1024px) {
+    .page-header.full-width {
+        margin: -20px -15px 20px !important;
+    }
+}
 
+@media (max-width: 575.98px) {
+    .page-header.full-width {
+        margin: -15px -15px 20px !important;
+    }
+}
+
+.page-header.full-width .page-block {
+    border-radius: 0 !important;
+    border: none !important;
+    border-bottom: 1px solid #dbe0e5 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03) !important;
+}
