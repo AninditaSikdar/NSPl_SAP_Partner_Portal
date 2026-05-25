@@ -169,21 +169,31 @@
 
                             <!-- Modal -->
                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="login-card pt-4">
+                                            <div class="close-sec">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="text-center mb-1">
+                                                <h2 style="color: #0d4a91;">OTP Verification</h2>
+                                                <p style="color: #6c757d; font-size: 15px;">Enter the 6-digit code sent to your registered phone.</p>
+                                            </div>
+                                            <form action="dashboard.html" onsubmit="window.location.href='dashboard.html'; return false;">
+                                                <div class="mb-4">
+                                                    <label for="otpCode" class="form-label d-block text-center">One-Time Password</label>
+                                                    <input type="text" class="form-control login-input text-center" id="otpCode" placeholder="X X X X X X" maxlength="6" style="font-size: 18px; letter-spacing: 8px; font-weight: 600;" required>
+                                                </div>
+                                                <button type="submit" class="signin w-100 justify-content-center">Submit</button>
+
+                                                <div class="text-center mt-4">
+                                                    <p id="resendMessage" style="color: #198754; font-weight: 600; font-size: 14px; display: none; margin-bottom: 5px;">A new code has been sent!</p>
+                                                    <p style="color: #617286; font-size: 14px;">Didn't receive the code? <a href="#" onclick="resendOTP(event)" style="color: #0d4a91; font-weight: 600; text-decoration: none;">Resend</a></p>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Understood</button>
-                                </div>
-                                </div>
-                            </div>
                             </div>
                         </div>
                         <div class="col-md-4 input-form">

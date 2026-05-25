@@ -62,6 +62,10 @@ p {
     text-align: end;
     width: 100%;
 }
+.close-sec{
+    width: 100%;
+    text-align: right;
+}
 .registration {
     background-color: transparent;
     border: 1px solid #fff;
@@ -222,7 +226,7 @@ p {
 }
 
 .form-label {
-    font-size: 14px;
+    font-size: 15px;
     color: #333;
     font-weight: 600;
     padding: 0 4px;
