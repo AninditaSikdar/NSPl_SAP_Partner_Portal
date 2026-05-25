@@ -157,15 +157,18 @@
 
                         <div class="col-md-4 input-form">
                             <label for="mobilePhone" class="form-label">Mobile Phone (without country code)</label>
-                            <input type="tel" class="form-control login-input" id="mobilePhone" name="mobilePhone" value="" placeholder="" required>
+                            <div class="position-relative d-flex align-items-center">
+                                <input type="tel" class="form-control login-input" id="mobilePhone" name="mobilePhone" value="" placeholder="" required>
+                                <button type="button" id="verifyBtn" class="Verify p-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 25%;">
+                                    Verify No.
+                                </button>
+                            </div>
 
                             <!-- <div class="text-end mt-1" id="verifyBtnContainer">
                                 <a href="javascript:void(0)" onclick="triggerOTPModal()" style="font-size: 13px; font-weight: 600; color: #0d4a91; text-decoration: underline;">Verify Mobile No.</a>
                             </div> -->
                             <!-- Button trigger modal -->
-                            <button type="button" class="Verify" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                Verify Mobile No.
-                            </button>
+                            
 
                             <!-- Modal -->
                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -179,7 +182,7 @@
                                                 <h2 style="color: #0d4a91;">OTP Verification</h2>
                                                 <p style="color: #6c757d; font-size: 15px;">Enter the 6-digit code sent to your registered phone.</p>
                                             </div>
-                                            <form action="dashboard.html" onsubmit="window.location.href='dashboard.html'; return false;">
+                                            <form action="#" onsubmit="verifyOTP(event);">
                                                 <div class="mb-4">
                                                     <label for="otpCode" class="form-label d-block text-center">One-Time Password</label>
                                                     <input type="text" class="form-control login-input text-center" id="otpCode" placeholder="X X X X X X" maxlength="6" style="font-size: 18px; letter-spacing: 8px; font-weight: 600;" required>
@@ -354,6 +357,22 @@
 
     function nextStep(step) { showStep(step); }
     function prevStep(step) { showStep(step); }
+
+    function verifyOTP(event) {
+        event.preventDefault();
+        const otpCode = document.getElementById('otpCode').value;
+        if (otpCode.length === 6) {
+            const modalElement = document.getElementById('staticBackdrop');
+            const modalInstance = bootstrap.Modal.getInstance(modalElement);
+            if (modalInstance) modalInstance.hide();
+            
+            document.getElementById('mobilePhone').readOnly = true;
+            document.getElementById('verifiedBadge').classList.remove('d-none');
+            document.getElementById('verifyBtn').classList.add('d-none');
+        } else {
+            alert('Please enter a valid 6-digit OTP.');
+        }
+    }
 </script>
 
 </body>
