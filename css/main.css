@@ -199,12 +199,33 @@ p {
 }
 .login-sec {
     background: linear-gradient(135deg, var(--brand-blue), var(--brand-cyan));
-    min-height: calc(115vh - 125px);
+    min-height: calc(105vh - 125px);
+    padding: 3em 0;
+    position: relative;
+    background-image: url('../images/bg1.jpg'); /* Re-using the background image from index.html */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 3em 0;
 }
 
+.login-sec::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, hsla(216, 100%, 33%, 0.90),  hsla(193, 80%, 41%, 0.90));
+    min-height: calc(105vh - 125px);
+    z-index: 1;
+}
+.login-sec .container {
+    position: relative;
+    z-index: 2;
+}
 .login-card {
     background: #ffffff;
     padding: 40px 30px;
