@@ -12,11 +12,7 @@
 <header class="portal-header">
   <nav class="navbar navbar-expand-xl portal-navbar" aria-label="Partner portal navigation">
     <div class="container portal-container">
-      <a class="portal-brand" href="index.html">
-        <img src="images/logo.png" alt="NSPL logo" class="portal-logo">
-        <span>Partner Portal</span>
-      </a>
-
+      
       <button class="navbar-toggler portal-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#portalNavbar" aria-controls="portalNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
         <span></span>
@@ -25,6 +21,11 @@
 
       <div class="collapse navbar-collapse portal-menu" id="portalNavbar">
         <div class="portal-top-row">
+        <a class="portal-brand" href="index.html">
+            <img src="images/logo.png" alt="NSPL logo" class="portal-logo">
+            <span>Partner Portal</span>
+        </a>
+
           <form class="portal-search" role="search">
             <span class="search-icon" aria-hidden="true">&#128269;</span>
             <input type="search" placeholder="Search all Partner Central data and resources" aria-label="Search all Partner Central data and resources">
@@ -49,30 +50,44 @@
         </div>
 
         <ul class="navbar-nav portal-links">
-          <li class="nav-item"><a class="nav-link active" href="dashboard.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Learn</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Build</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Market</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Sell</a></li>
+          <li class="nav-item"><a class="nav-link active" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Lead Generation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Opportunities </a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Task</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Invoice</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Funding</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Analytics</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Partner Connections</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Resources </a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Newsletter</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
 
-<div class="container py-5">
-  <div class="row">
-    <div class="col-12">
-      <h1 class="mb-4">Dashboard</h1>
-      <p>Welcome to the partner portal dashboard. This page uses the same responsive top navigation menu.</p>
-    </div>
+<main class="dashboard-page">
+  <div class="container">
+    <h1 class="dashboard-title">Welcome, Poonam Padhy</h1>
+
+    <section class="partner-summary" aria-label="Partner account summary">
+      <div class="summary-item">
+        <span class="summary-label">Company Name</span>
+        <strong class="summary-value">Nishan Systems Pvt. Ltd.</strong>
+      </div>
+
+      <div class="summary-item">
+        <span class="summary-label">APN Fee Renewal Date</span>
+        <strong class="summary-value">Confirm Membership Required</strong>
+      </div>
+
+      <div class="summary-item">
+        <span class="summary-label">Partner Path</span>
+        <strong class="summary-badge">Services Path</strong>
+      </div>
+    </section>
   </div>
-</div>
+</main>
 
 <script src="js/bootstrap.min.js"></script>
 </body>
