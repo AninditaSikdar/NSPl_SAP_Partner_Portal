@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dashboard - SAP Partner Portal</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -21,7 +22,7 @@
 
       <div class="collapse navbar-collapse portal-menu" id="portalNavbar">
         <div class="portal-top-row">
-        <a class="portal-brand" href="index.html">
+        <a class="portal-brand" href="index.php">
             <img src="images/logo.png" alt="NSPL logo" class="portal-logo">
             <span>Partner Portal</span>
         </a>
@@ -50,8 +51,8 @@
         </div>
 
         <ul class="navbar-nav portal-links">
-          <li class="nav-item"><a class="nav-link active" href="dashboard.html">Dashboard</a></li>
-          <li class="nav-item"><a class="nav-link" href="lead-generation.html">Lead Generation</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="lead-generation.php">Lead Generation</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Opportunities </a></li>
           <li class="nav-item"><a class="nav-link" href="#">Task</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Invoice</a></li>

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE php>
+<php>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,8 +21,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="justify-content: end;">
         <div class="navbar-nav">
-            <a class="signin" href="signin.html">Sign In</a>
-            <a class="signup" href="registration.html">Registration</a>
+            <a class="signin" href="signin.php">Sign In</a>
+            <a class="signup" href="registration.php">Registration</a>
         </div>
     </div>
   </div>
@@ -41,7 +41,7 @@
                         Our exclusive partner Web site provides information, tools, and access to training, as well as specific applications to help you manage your SAP partnership.
                     </h6>
                     <div style="margin-top: 25px;">
-                        <a href="signin.html" class="registration">Sign In to SAP Partner Portal</a>
+                        <a href="signin.php" class="registration">Sign In to SAP Partner Portal</a>
                     </div>
                 </div>
             </div>
@@ -64,4 +64,4 @@
 <script src="js/bootstrap.min.js"></script>
 
 </body>
-</html>
+</php>

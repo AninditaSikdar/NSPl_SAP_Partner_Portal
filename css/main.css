@@ -52,6 +52,23 @@ p {
     margin: 0;
 }
 
+th{
+    background-color: rgb(100, 100, 100)!important;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #c2c2c2;
+}
+td{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 15px;
+    border: 1px solid #c2c2c2;
+}
+.badge {
+    font-size: 13px;
+    font-weight: 600;
+}
 .Verify{
     background-color: transparent;
     font-size: 13px;
@@ -86,7 +103,29 @@ p {
     background: #fff;
     color: var(--brand-blue);
 }
-
+.search-btn{
+    background: linear-gradient(135deg, var(--brand-blue), var(--brand-cyan));
+    background-size: 200% 200%;
+    color: #fff;
+    border: none;
+}
+.view-details{
+    border: 1px solid #0043a8!important;
+    color: #0043a8;
+    transition: 0.5s;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.view-details:hover{
+    color: #fff;
+    background: linear-gradient(135deg, var(--brand-blue), var(--brand-cyan));
+    background-size: 200% 200%;
+}
 .signin,
 .signup {
     padding: 8px 24px;
@@ -193,11 +232,6 @@ p {
     padding: 0;
 }
 
-.portal-container {
-    align-items: stretch;
-    gap: 24px;
-    padding: 0 30px;
-}
 .portal-brand span{
     color: #2a2a2a;
 }
@@ -240,6 +274,7 @@ p {
 
 .portal-search {
     position: relative;
+    margin: 0;
 }
 
 .portal-search input {
@@ -451,7 +486,7 @@ p {
     box-shadow: var(--shadow-soft);
 }
 .dashboard-panel{
-    margin:4em 0;
+    margin: 3em 0;
 }
 .dashboard-panel-header {
     display: flex;
@@ -464,9 +499,9 @@ p {
 
 .dashboard-panel-title {
     color: #111827;
-    font-size: 20px;
-    font-weight: 800;
-    line-height: 1.25;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
 }
 
 .dashboard-panel-title span {
@@ -949,6 +984,7 @@ p {
 
 .login-input {
     padding: 5px 15px;
+    border-radius: 0;
     font-size: 14px;
     border: 1px solid #ced4da;
     transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
@@ -1437,4 +1473,9 @@ p {
     .checkbox-grid {
         grid-template-columns: 1fr;
     }
+}
+
+
+.table-responsive{
+    padding: 20px;
 }

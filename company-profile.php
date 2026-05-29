@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!doctype php>
+<php lang="en">
 <head>
     <title>Nishan Systems Pvt. Ltd.</title>
     <meta charset="utf-8" />
@@ -24,14 +24,14 @@
             <div class="navbar-content">
                 <ul class="pc-navbar">
                     <li class="pc-item pc-hasmenu">
-                        <a href="dashboard.html" class="pc-link">
+                        <a href="dashboard.php" class="pc-link">
                             <span class="pc-micon"> <i class="fa fa-cogs"></i> </span>
                             <span class="pc-mtext">Dashboard</span>
                         </a>
                         
                     </li>
                     <li class="pc-item pc-hasmenu">
-                        <a href="company-profile.html" class="pc-link">
+                        <a href="company-profile.php" class="pc-link">
                             <span class="pc-micon"> <i class="fa fa-user"></i> </span>
                             <span class="pc-mtext">Company Profile</span>
                         </a>
@@ -55,7 +55,7 @@
                 <div class="logout-sec">
                      <ul>
                         <li class="pc-item">
-                            <a href="signin.html" class="pc-link"><span class="pc-micon"> 
+                            <a href="signin.php" class="pc-link"><span class="pc-micon"> 
                                 <i class="fa fa-sign-out" aria-hidden="true"></i></span><span class="pc-mtext">Logout</span>
                             </a>
                         </li>
@@ -459,7 +459,7 @@
 
 function addField(type){
 
-var html = `
+var php = `
 <div class="field" data-type="${type}">
     <div class="flex" style="justify-content:space-between;align-items:center;">
         <div class="w-85">
@@ -482,7 +482,7 @@ var html = `
 </div>
 `;
 
-$("#canvas").append(html);
+$("#canvas").append(php);
 
 updatePreview();
 
@@ -505,7 +505,7 @@ updatePreview();
 
 function updatePreview(){
 
-var html="";
+var php="";
 
 $("#canvas .field").each(function(){
 
@@ -515,79 +515,79 @@ var options=$(this).find(".options").val();
 var required=$(this).find(".required").is(":checked") ? "required" : "";
 
 
-if(type=="heading") html+="<h3>"+label+"</h3>";
+if(type=="heading") php+="<h3>"+label+"</h3>";
 
-if(type=="paragraph") html+="<p>"+label+"</p>";
+if(type=="paragraph") php+="<p>"+label+"</p>";
 
-if(type=="divider") html+="<hr>";
+if(type=="divider") php+="<hr>";
 
-if(type=="text") html+="<label>"+label+"</label><input type='text' class='form-control' "+required+">";
+if(type=="text") php+="<label>"+label+"</label><input type='text' class='form-control' "+required+">";
 
-if(type=="email") html+="<label>"+label+"</label><input type='email' class='form-control' "+required+">";
+if(type=="email") php+="<label>"+label+"</label><input type='email' class='form-control' "+required+">";
 
-if(type=="password") html+="<label>"+label+"</label><input type='password' class='form-control' "+required+">";
+if(type=="password") php+="<label>"+label+"</label><input type='password' class='form-control' "+required+">";
 
-if(type=="phone") html+="<label>"+label+"</label><input type='tel' class='form-control' "+required+">";
+if(type=="phone") php+="<label>"+label+"</label><input type='tel' class='form-control' "+required+">";
 
-if(type=="url") html+="<label>"+label+"</label><input type='url' class='form-control' "+required+">";
+if(type=="url") php+="<label>"+label+"</label><input type='url' class='form-control' "+required+">";
 
-if(type=="number") html+="<label>"+label+"</label><input type='number' class='form-control' "+required+">";
+if(type=="number") php+="<label>"+label+"</label><input type='number' class='form-control' "+required+">";
 
-if(type=="range") html+="<label>"+label+"</label><input type='range' class='form-range' "+required+">";
+if(type=="range") php+="<label>"+label+"</label><input type='range' class='form-range' "+required+">";
 
-if(type=="date") html+="<label>"+label+"</label><input type='date' class='form-control' "+required+">";
+if(type=="date") php+="<label>"+label+"</label><input type='date' class='form-control' "+required+">";
 
-if(type=="time") html+="<label>"+label+"</label><input type='time' class='form-control' "+required+">";
+if(type=="time") php+="<label>"+label+"</label><input type='time' class='form-control' "+required+">";
 
-if(type=="datetime") html+="<label>"+label+"</label><input type='datetime-local' class='form-control' "+required+">";
+if(type=="datetime") php+="<label>"+label+"</label><input type='datetime-local' class='form-control' "+required+">";
 
-if(type=="file") html+="<label>"+label+"</label><input type='file' class='form-control' "+required+">";
+if(type=="file") php+="<label>"+label+"</label><input type='file' class='form-control' "+required+">";
 
-if(type=="image") html+="<label>"+label+"</label><input type='file' accept='image/*' class='form-control' "+required+">";
+if(type=="image") php+="<label>"+label+"</label><input type='file' accept='image/*' class='form-control' "+required+">";
 
-if(type=="color") html+="<label>"+label+"</label><input type='color' class='form-control form-control-color' "+required+">";
+if(type=="color") php+="<label>"+label+"</label><input type='color' class='form-control form-control-color' "+required+">";
 
-if(type=="hidden") html+="<input type='hidden'>";
+if(type=="hidden") php+="<input type='hidden'>";
 
-if(type=="textarea") html+="<label>"+label+"</label><textarea class='form-control' "+required+"></textarea>";
+if(type=="textarea") php+="<label>"+label+"</label><textarea class='form-control' "+required+"></textarea>";
 
 if(type=="select"){
 
-html+="<label>"+label+"</label><select class='form-control' "+required+">";
+php+="<label>"+label+"</label><select class='form-control' "+required+">";
 
 options.split(",").forEach(function(o){
-if(o.trim()) html+="<option>"+o+"</option>";
+if(o.trim()) php+="<option>"+o+"</option>";
 });
 
-html+="</select>";
+php+="</select>";
 
 }
 
 if(type=="radio"){
 
-html+="<label>"+label+"</label>";
+php+="<label>"+label+"</label>";
 
 options.split(",").forEach(function(o){
-if(o.trim()) html+="<div><input type='radio' "+required+"> "+o+"</div>";
+if(o.trim()) php+="<div><input type='radio' "+required+"> "+o+"</div>";
 });
 
 }
 
 if(type=="checkbox"){
 
-html+="<label>"+label+"</label>";
+php+="<label>"+label+"</label>";
 
 options.split(",").forEach(function(o){
-if(o.trim()) html+="<div><input type='checkbox' "+required+"> "+o+"</div>";
+if(o.trim()) php+="<div><input type='checkbox' "+required+"> "+o+"</div>";
 });
 
 }
 
-html+="<br>";
+php+="<br>";
 
 });
 
-$("#preview").html(html);
+$("#preview").php(php);
 
 }
 
@@ -640,4 +640,4 @@ alert(JSON.stringify(data,null,2));
 </script>
 </body>
 
-</html>
+</php>

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
             <img src="images/logo.png" alt="NSPL logo" class="logo-img">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,8 +20,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="justify-content: end;">
             <div class="navbar-nav">
-                <a class="signin" href="signin.html">Sign In</a>
-                <a class="signup" href="registration.html">Registration</a>
+                <a class="signin" href="signin.php">Sign In</a>
+                <a class="signup" href="registration.php">Registration</a>
             </div>
         </div>
     </div>
@@ -376,4 +376,4 @@
 </script>
 
 </body>
-</html>
+</php>

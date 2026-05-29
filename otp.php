@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE php>
+<php>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
                         <h2 style="color: #0d4a91; margin-bottom: 8px;">OTP Verification</h2>
                         <p style="color: #6c757d; font-size: 15px;">Enter the 6-digit code sent to your registered phone.</p>
                     </div>
-                    <form action="dashboard.html" onsubmit="window.location.href='dashboard.html'; return false;">
+                    <form action="dashboard.php" onsubmit="window.location.href='dashboard.php'; return false;">
                         <div class="mb-4">
                             <label for="otpCode" class="form-label d-block text-center">One-Time Password</label>
                             <input type="text" class="form-control login-input text-center" id="otpCode" placeholder="X X X X X X" maxlength="6" style="font-size: 18px; letter-spacing: 8px; font-weight: 600;" required>
@@ -32,7 +32,7 @@
                             <p style="color: #617286; font-size: 14px;">Didn't receive the code? <a href="#" onclick="resendOTP(event)" style="color: #0d4a91; font-weight: 600; text-decoration: none;">Resend</a></p>
                         </div>
 
-                        <a href="signin.html" class="back-btn mt-3">
+                        <a href="signin.php" class="back-btn mt-3">
                             <i class="fa fa-angle-double-left"></i> Back to Login
                         </a>
                     </form>
@@ -58,4 +58,4 @@
 </script>
 
 </body>
-</html>
+</php>

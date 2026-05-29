@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE php>
+<php>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,14 +20,14 @@
                         <h2 style="color: #0d4a91; margin-bottom: 0;">Welcome Back</h2>
                         <p>Sign in to your SAP Partner account</p>
                     </div>
-                    <form action="otp.html" onsubmit="window.location.href='otp.html'; return false;">
+                    <form action="otp.php" onsubmit="window.location.href='otp.php'; return false;">
                         <div class="mb-4">
                             <label for="partnerId" class="form-label">Partner ID</label>
                             <input type="text" class="form-control login-input" id="partnerId" placeholder="Enter your SAP Partner ID" required>
                         </div>
                         <button type="submit" class="signin w-100 justify-content-center mt-4">Submit</button>
 
-                        <a href="index.html" class="back-btn">
+                        <a href="index.php" class="back-btn">
                             <i class="fa fa-angle-double-left"></i> Back to Home
                         </a>
                     </form>
@@ -41,4 +41,4 @@
 <script src="js/bootstrap.min.js"></script>
 
 </body>
-</html>
+</php>
