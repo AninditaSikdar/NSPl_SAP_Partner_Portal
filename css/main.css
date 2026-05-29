@@ -1149,7 +1149,19 @@ td{
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
 }
-
+.section-heading h4 {
+    font-size: 20px;
+    margin: 0 0;
+    color: #0043a8;
+    font-weight: 700;
+}
+.step-section{
+    margin: 0 0 20px;
+}
+.section-heading.border-bottom {
+    margin: 0 0 35px;
+    padding: 0 0 10px;
+}
 .form-actions {
     margin-top: 32px;
     display: flex;
@@ -1235,7 +1247,7 @@ td{
     color: var(--text-main);
 }
 
-@media (max-width: 1199.98px) {
+/* @media (max-width: 1199.98px) {
     .portal-container {
         padding: 0 18px;
     }
@@ -1288,9 +1300,9 @@ td{
         padding: 12px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
-}
+} */
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
     .dashboard-page {
         padding: 24px 0 44px;
     }
@@ -1357,9 +1369,9 @@ td{
     .registration-card {
         padding: 28px;
     }
-}
+} */
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     h1 {
         font-size: 34px;
     }
@@ -1473,7 +1485,7 @@ td{
     .checkbox-grid {
         grid-template-columns: 1fr;
     }
-}
+} */
 
 
 .table-responsive{

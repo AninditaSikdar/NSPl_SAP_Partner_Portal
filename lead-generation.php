@@ -9,7 +9,7 @@
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
         <h1 class="dashboard-title m-0">Lead Generation</h1>
-        <a href="#" class="registration m-0" style="text-decoration: none;">Create New Lead</a>
+        <a href="create-lead.php" class="registration m-0" style="text-decoration: none;">Create New Lead</a>
     </div>
   </div>
 </main>
