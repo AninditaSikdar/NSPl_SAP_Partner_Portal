@@ -4,7 +4,7 @@
     include_once('common/header.php');
 ?>
 
-<main class="dashboard-page mb-5">
+<main class="dashboard-page">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
         <h1 class="dashboard-title m-0">Create New Lead</h1>
@@ -19,7 +19,7 @@
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col-md-7">
-            <div class="registration-card">
+            <div class="registration-card dashboard-panel">
                 <form action="lead-generation.php" method="POST" class="partner-form">
                     <!-- Contact Information -->
                     <div class="step-section">
@@ -121,6 +121,8 @@
     </div>
 </div>
 
+
+<!--footer-->
 <?php
     include_once('common/footer.php');
 ?>

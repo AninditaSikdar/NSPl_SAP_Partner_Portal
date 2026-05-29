@@ -57,7 +57,7 @@
           <li class="nav-item"><a class="nav-link" href="#">Task</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Invoice</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Resources </a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.php">Resources </a></li>
           <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Newsletter</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
